@@ -8,7 +8,7 @@ const about = (req, res) => {
 }
 
 const faq = (req, res) => {
-    res.render('main/faq.ejs', {'title' : 'main/faq'})
+    res.render('main/faq.ejs', {'title' : 'faq'})
 }
 
 const features = (req, res) => {
