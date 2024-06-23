@@ -1,5 +1,6 @@
 import express from 'express';
 import { mainRouter } from './routes/mainRoutes.js';
+import { profileRouter } from './routes/profileRoutes.js';
 import {join} from 'path';
 
 const app = express();
@@ -10,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(join(process.cwd(),'public')));
 
 app.use('/', mainRouter);
-
+app.use('/profile', profileRouter);
 
 app.listen(port, () => {
     console.log(`App listening on http://localhost:${port}`);
